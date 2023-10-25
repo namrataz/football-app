@@ -1,0 +1,8 @@
+<div class="container">
+    <ul>
+        <li *ngFor="let country of countryList">
+            <a [routerLink]="['/', country.label]" (click)="setActiveMenu(country.id)"
+                [class.active]="selectedId === country.id">{{country.value}}</a>
+        </li>
+    </ul>
+</div>

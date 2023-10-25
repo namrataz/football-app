@@ -1,0 +1,30 @@
+<div class="container">
+    <body>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Logo</th>
+                <th>Name</th>
+                <th>Games</th>
+                <th>W</th>
+                <th>L</th>
+                <th>D</th>
+                <th>Goal Difference</th>
+                <th>Points</th>
+            </tr>
+            <tr *ngFor="let data of standingData">
+                <td>{{data.team.id}}</td>
+                <td>
+                    <img src="{{data.team.logo}}" alt="countryFlag" height="30" width="30" />
+                </td>
+                <td><a [routerLink]="['/results']" (click)="onSelectTeamName(data.team.id)">{{data.team.name}}</a></td>
+                <td>{{data.all.played}}</td>
+                <td>{{data.all.win}}</td>
+                <td>{{data.all.draw}}</td>
+                <td>{{data.all.loose}}</td>
+                <td>{{data.goalsDiff}}</td>
+                <td>{{data.points}}</td>
+            </tr>
+        </table>
+    </body>
+</div>
