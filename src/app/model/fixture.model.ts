@@ -58,7 +58,7 @@ export interface FixtureLeague {
 
 export interface FixtureModel {
   id: number;
-  reference?: any;
+  referee?: string;
   timezone: string;
   date: string;
   timestamp: string;
