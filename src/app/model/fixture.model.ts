@@ -25,8 +25,8 @@ export interface Score {
 }
 
 export interface Fulltime {
-    home?: any;
-    away?: any;
+    home?: number;
+    away?: number;
 }
 
 export interface FixtureGoals {
@@ -81,7 +81,7 @@ export interface Venue {
 
 export interface Periods {
     first: number;
-    second?:any;
+    second?: number;
 }
 
 export interface FixtureParam {

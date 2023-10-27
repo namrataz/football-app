@@ -1,5 +1,5 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { FixtureApiResponse, FixtureResponse } from 'src/app/model/fixture.model';
 import { ApiService } from 'src/app/services/api.service';
 
@@ -10,7 +10,7 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class ResultsComponent implements OnInit {
   resultData: FixtureResponse[] = [];
-  constructor(private apiService: ApiService, private router: Router) {
+  constructor(private apiService: ApiService, private location: Location) {
 
   }
   ngOnInit(): void {
@@ -34,6 +34,6 @@ export class ResultsComponent implements OnInit {
   }
 
   goBack(){
-    this.router.navigateByUrl("/");
+    this.location.back();
   }
 }
